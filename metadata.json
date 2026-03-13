@@ -1,0 +1,5 @@
+{
+  "name": "Ajay Weather",
+  "description": "An immersive, atmospheric weather experience with real-time data and unique visual transitions.",
+  "requestFramePermissions": ["geolocation"]
+}

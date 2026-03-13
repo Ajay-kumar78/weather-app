@@ -1,0 +1,58 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Weather Themes */
+  --color-weather-sunny-start: #4facfe;
+  --color-weather-sunny-end: #00f2fe;
+  
+  --color-weather-night-start: #0f172a;
+  --color-weather-night-end: #1e293b;
+
+  --color-weather-cloudy-start: #bdc3c7;
+  --color-weather-cloudy-end: #2c3e50;
+
+  --color-weather-rainy-start: #4b6cb7;
+  --color-weather-rainy-end: #182848;
+
+  --color-weather-snowy-start: #e6e9f0;
+  --color-weather-snowy-end: #eef1f5;
+
+  --color-weather-stormy-start: #141e30;
+  --color-weather-stormy-end: #243b55;
+}
+
+@layer base {
+  body {
+    @apply bg-slate-950 text-white font-sans antialiased;
+  }
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-2xl border border-white/10 shadow-2xl;
+}
+
+.glass-dark {
+  @apply bg-black/40 backdrop-blur-3xl border border-white/5 shadow-2xl;
+}
+
+.glass-hover {
+  @apply hover:bg-white/10 hover:border-white/20 transition-all duration-300;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
